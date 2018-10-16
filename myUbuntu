@@ -1,0 +1,78 @@
+1.ubuntu18.04新建文档：
+https://jingyan.baidu.com/article/6079ad0ecbc85428ff86dbdc.html
+
+2.Ubuntu 18.04 安装后的主题美化与软件安装
+https://blog.csdn.net/MasterAnt_D/article/details/56839492
+
+3.killall -9 程序名	（杀进程）ps a查看进程	https://blog.csdn.net/wojiaopanpan/article/details/7286430
+
+4.Ubuntu 发行版的命令行中，我们可以使用 nautilus 命令来打开指定目录的图形化窗口界面。类似下面命令这样使用：sudo  nautilus ./mysql
+
+5.打开Window->Preferences->General->Appearance在Color Theme里就可以选择自己喜欢的主题了(修改eclipse主题)
+	此次java什么的都在，只需要重装一次eclipse就行，配置都不怎么需要，也许是因为我用了旧的工作空间，tomcat直接复制
+
+6.mysql重装,5.7--->8.0	https://www.cnblogs.com/xym4869/p/8781792.html(卸载)
+			https://blog.csdn.net/amoscykl/article/details/81489334（安装）
+
+7.vi命令	http://man.linuxde.net/vi
+
+8.改用了8.0版本的MySQL后，由于tomcat9.0版本内置的java-mysql×.jar包是（当时最新的搭配）5.7版本的，
+	所以需要替换一下/tomcat/../lib下的jar包，eclipse里的tomcat服务器也要重新更新一哈
+8.0 change password:	
+use mysql；
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码';
+FLUSH PRIVILEGES;
+
+9.网易云音乐官方支持啦---->不要用系统图形界面安装软件包，用dpkg -i安装，这样若出错了，可用命令修复依赖错误
+
+10.Ubuntu17.04安装PHPstudy详细教程https://blog.csdn.net/shay_lau/article/details/80205088
+
+****************
+11.ubuntu18.04LTS设置静态IPhttps://blog.csdn.net/wuyoulv/article/details/81001503,
+此处我设置dhcp4: yes		终于连上网了（有线）
+http://blog.sina.com.cn/s/blog_5373bcf40102xk5g.html
+
+12.安装nginx和PHP环境	
+	配置：https://blog.csdn.net/dreamstone_xiaoqw/article/details/80859295，注意自己的版本是7.2的而默认配置都是7.0的，一定要细心改了
+	nginx常用操作
+
+		sudo service  nginx reload 不重启重新载入最新配置文件内容
+
+		sudo service  nginx stop 停止服务
+
+		sudo service  nginx restart 重启服务
+
+重装系统后，再次安装nginx，有问题，是因为没有添加国内源，使用的是系统的默认源，可能是默认源有问题（因为之前的的系统添加了国内源，这次重装莫不是没删干净，起了冲突；又或者就是默认源的nginx有问题）
+
+13.https://www.dacaiqi.com/news/ZF83MmVlNTYxYTY5Nzg1YmUxNjEzOGRmMmI/ QQ邮箱登录在Mozilla Thunderbird
+
+
+14.https://blog.csdn.net/biggoodloong/article/details/81150552  Ubuntu 18.04 jdk，Eclipse安装和配置
+
+
+15.jsgb1810
+
+16.nginx 配置：
+	增加用户认证访问：https://blog.csdn.net/xuxile/article/details/79204373
+	允许访问：https://blog.csdn.net/xiaocao12/article/details/52304097/
+17. uget + aria2c 下载工具：https://blog.csdn.net/naivor/article/details/65934189 
+(浏览器找不到本地的uget，原因在这)https://github.com/ugetdm/uget-integrator/wiki/Installation
+
+18.https://www.cnblogs.com/kfpa/p/Portia.html Ubuntu部署可视化爬虫Portia2.0环境(重启服务那里，第二个应该是 sudo service docker restart);
+目录我按照文章所写的，username=tanpang;
+docker启动命令,docker重启命令,docker关闭命令
+
+启动        systemctl start docker
+守护进程重启   sudo systemctl daemon-reload
+重启docker服务   systemctl restart  docker
+重启docker服务  sudo service docker restart
+关闭docker service docker stop
+关闭docker systemctl stop docker
+--------------------- 
+作者：EasternUnbeaten 
+来源：CSDN 
+原文：https://blog.csdn.net/easternunbeaten/article/details/80463837?utm_source=copy 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+

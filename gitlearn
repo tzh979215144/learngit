@@ -1,0 +1,30 @@
+(初始化当前目录为仓库)git init
+git config --global user.email "your@example.com"(979215144@qq.com
+git config --global user.name "Your Name"(tanpang
+
+git add filename(readme.txt
+.
+.
+.
+git commit -m "附加信息"(balabal
+
+git log	(查看修改日志，内有文件版本号，相当于指针)
+
+
+
+git log --pretty=oneline	(同上，把关键内容展现在一行，方便查阅)
+
+git reset --hard HEAD^	(代表返回上一个版本，同理HEAD^^代表返回上上个版本，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100）
+
+HEAD相当于指针
+
+git reflog 可以查看操作历史信息，包含了之前（未来）的版本号
+
+-----------------
+工作区（ubuntu文件）-->git add readme.txt -->缓存区-->git commit-->分支（branch，默认创建了master分支）
+
+场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
+
+场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
+
+场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
